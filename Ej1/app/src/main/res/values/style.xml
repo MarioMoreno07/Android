@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="estiloEditText">
+            <item name="android:textSize">50dp</item>
+            <item name="android:textColor">@color/EditText</item>
+
+    </style>
+
+
+
+</resources>
