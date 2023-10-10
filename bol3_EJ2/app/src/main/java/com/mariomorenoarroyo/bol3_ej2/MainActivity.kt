@@ -9,13 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         val imageList = listOf(
-            "https://uniscopio.com/wp-content/uploads/2022/07/estudiar-en-sevilla-todo-lo-que-necesitas-saber.jpg"
+            R.drawable.sevilla
         )
 
         val layoutManager = GridLayoutManager(this, 2)
@@ -23,5 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = ImageAdapter(this, imageList)
         recyclerView.adapter = adapter
+
     }
 }

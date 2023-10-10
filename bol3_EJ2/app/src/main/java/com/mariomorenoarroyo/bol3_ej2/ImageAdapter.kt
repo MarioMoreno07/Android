@@ -9,35 +9,26 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
-class ImageAdapter(private val context: Context, private val imageList: List<String>) :
-    RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
-
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.imageView)
-
-        init {
-            itemView.setOnClickListener {
-                val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-
-                    val location = "geo:0,0?q=${imageList[position]}"
-                    val mapIntent = Intent(Intent.ACTION_VIEW, Uri.parse(location))
-                    context.startActivity(mapIntent)
-                }
-            }
-        }
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+class ImageAdapter(private val context: Context, private val imageList: List<Int>) : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_layout, parent, false)
-        return ViewHolder(view)
+        return ImageViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+    override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
+        val imageResId = imageList[position]
+        holder.imageView.setImageResource(imageResId)
     }
 
     override fun getItemCount(): Int {
         return imageList.size
     }
+
+    class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView: ImageView = itemView.findViewById(R.id.imageView)
+    }
+
+
 }
+
+
