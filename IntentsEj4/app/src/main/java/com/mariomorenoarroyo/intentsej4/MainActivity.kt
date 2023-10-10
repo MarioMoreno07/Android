@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         val setAlarm = findViewById<Button>(R.id.alarm)
         extracted(setAlarm)
-        
+
         val botonWeb = findViewById<Button>(R.id.button2)
         extracted2(botonWeb)
 
@@ -27,9 +27,9 @@ class MainActivity : AppCompatActivity() {
     private fun extracted(setAlarm: Button) {
         setAlarm.setOnClickListener {
             val Alarm = Intent(AlarmClock.ACTION_SET_ALARM).apply {
-                putExtra(AlarmClock.EXTRA_MESSAGE, "Alarma")
-                putExtra(AlarmClock.EXTRA_HOUR, 12)
-                putExtra(AlarmClock.EXTRA_MINUTES, 30)
+                putExtra(AlarmClock.EXTRA_MESSAGE, "CrearAlarma")
+                putExtra(AlarmClock.EXTRA_HOUR, 8)
+                putExtra(AlarmClock.EXTRA_MINUTES, 0)
             }
             startActivity(Alarm)
         }
@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
     private fun extracted3(botonContacts: Button) {
         botonContacts.setOnClickListener {
             val Contacts = Intent(Intent.ACTION_VIEW).apply {
