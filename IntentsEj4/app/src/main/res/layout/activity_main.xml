@@ -11,9 +11,9 @@
         android:id="@+id/alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="145dp"
         android:layout_marginTop="252dp"
         android:text="Alarma"
-        android:layout_marginLeft="145dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="158dp" />
@@ -22,9 +22,9 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
         android:layout_marginTop="21dp"
         android:text="Buscar Web"
-        android:layout_marginLeft="135dp"
         app:layout_constraintTop_toBottomOf="@+id/alarm"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="143dp" />
@@ -33,9 +33,9 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="145dp"
         android:layout_marginTop="21dp"
         android:text="Ir a Web"
-        android:layout_marginLeft="145dp"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="155dp" />
